@@ -41,7 +41,7 @@ const getElementIndexByText = async function(locator, text) {
 const clickElementByIndex = async function(locator, index) {
     const elementsArray = await driver.findElements(locator);
     await elementsArray[index].click();
-}
+};
 
 const waitUntilVisible = async function(locator, timeout = 1000) {
     const element = await driver.findElement(locator);

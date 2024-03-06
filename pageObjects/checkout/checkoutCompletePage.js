@@ -1,5 +1,5 @@
-import { By } from "selenium-webdriver";
-import { expect } from "chai";
+import { By } from 'selenium-webdriver';
+import { expect } from 'chai';
 
 import { getText } from '../../utils/driverManager.js';
 
