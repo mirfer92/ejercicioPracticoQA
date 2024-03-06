@@ -29,6 +29,20 @@ const getText = async function (locator) {
     return driver.findElement(locator).getText();
 };
 
+const getElementIndexByText = async function(locator, text) {
+    const elementsArray = await driver.findElements(locator);
+    for (let index = 0; index < elementsArray.length; index++) {
+        const elementText = await elementsArray[index].getText();
+        if(elementText.includes(text)) return index;
+    }
+    return -1;
+};
+
+const clickElementByIndex = async function(locator, index) {
+    const elementsArray = await driver.findElements(locator);
+    await elementsArray[index].click();
+}
+
 const waitUntilVisible = async function(locator, timeout = 1000) {
     const element = await driver.findElement(locator);
     await driver.wait(await until.elementIsVisible(element), timeout);
@@ -40,5 +54,7 @@ export {
     fillText,
     clickElement,
     getText,
+    getElementIndexByText,
+    clickElementByIndex,
     waitUntilVisible
 };
