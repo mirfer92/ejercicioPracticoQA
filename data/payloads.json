@@ -1,0 +1,19 @@
+{
+    "pet": {
+        "category": {
+          "id": 0,
+          "name": "cat"
+        },
+        "name": "Honey",
+        "photoUrls": [
+          "myHoney.png"
+        ],
+        "tags": [
+          {
+            "id": 10,
+            "name": "kitty"
+          }
+        ],
+        "status": "available"
+    }
+}
