@@ -1,20 +1,25 @@
 import { Builder, Capabilities, until } from 'selenium-webdriver';
 import LoginPage from '../pageObjects/loginPage.js';
 
-const capabilities = Capabilities.chrome();
-capabilities.set('chromeOptions', { 'w3c': false });
-const driver = new Builder().withCapabilities(capabilities).build();
-driver.manage().window().maximize();
+let driver;
+
 
 const SAUCEDEMO_URL = 'https://www.saucedemo.com/';
 
-const navigateToSaucedemo = async function() {
-    await driver.get(SAUCEDEMO_URL);
-    return new LoginPage();
+const initializeBrowser = async function() {
+    const capabilities = Capabilities.chrome();
+    capabilities.set('chromeOptions', { 'w3c': false });
+    driver = new Builder().withCapabilities(capabilities).build();
+    driver.manage().window().maximize();
 };
 
 const closeBrowser = async function () {
     await driver.quit();
+};
+
+const navigateToSaucedemo = async function() {
+    await driver.get(SAUCEDEMO_URL);
+    return new LoginPage();
 };
 
 const fillText = async function (locator, text) {
@@ -49,8 +54,9 @@ const waitUntilVisible = async function(locator, timeout = 1000) {
 };
 
 export {
-    navigateToSaucedemo,
+    initializeBrowser,
     closeBrowser,
+    navigateToSaucedemo,
     fillText,
     clickElement,
     getText,

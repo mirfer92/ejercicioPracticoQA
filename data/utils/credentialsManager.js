@@ -1,4 +1,4 @@
-import credentials from '../data/credentials.json' with { type: "json" };
+import credentials from '../credentials.json' with { type: "json" };
 
 function getCredentials(userKey) {
     const userData = credentials.users[userKey];

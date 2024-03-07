@@ -1,3 +1,4 @@
+@UI
 Feature: Shopping
   E2E testing for Shopping products in saucedemo webpage
   

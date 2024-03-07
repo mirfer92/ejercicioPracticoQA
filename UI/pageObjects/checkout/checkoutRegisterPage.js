@@ -1,7 +1,7 @@
-import { By } from "selenium-webdriver";
+import { By } from 'selenium-webdriver';
 
-import { clickElement, fillText } from "../../utils/driverManager.js";
-import CheckoutOverviewPage from "./checkoutOverviewPage.js";
+import { clickElement, fillText } from '../../utils/driverManager.js';
+import CheckoutOverviewPage from './checkoutOverviewPage.js';
 
 class CheckoutRegisterPage {
     constructor() {

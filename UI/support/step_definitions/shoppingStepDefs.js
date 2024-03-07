@@ -1,7 +1,7 @@
 import { Given, When, Then } from '@cucumber/cucumber';
 
-import { navigateToSaucedemo } from '../../../utils/driverManager.js';
-import { getCredentials } from '../../../utils/credentialsManager.js';
+import { navigateToSaucedemo } from '../../utils/driverManager.js';
+import { getCredentials } from '../../../data/utils/credentialsManager.js';
 
 let pageObject;
 

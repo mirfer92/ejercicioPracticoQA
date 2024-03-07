@@ -1,4 +1,4 @@
 export default {
     default: '--format-options \'{"snippetInterface": "synchronous"}\'',
-    import: ['./test/support/**/*.js']
+    import: ['./UI/support/**/*.js', './API/support/**/*.js']
 };

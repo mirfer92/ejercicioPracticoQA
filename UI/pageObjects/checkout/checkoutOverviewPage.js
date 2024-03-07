@@ -13,7 +13,7 @@ class CheckoutOverviewPage {
     async validateCheckoutItems(items) {
         for (const itemName of items) {
             const index = await getElementIndexByText(this.cartItemLnk, itemName);
-            expect(index).to.not.be.equal(-1,  `Item with name ${itemName} is not present in the Cart`);
+            expect(index).to.not.be.equal(-1, `Item with name ${itemName} is not present in the Cart`);
         }
     }
 
