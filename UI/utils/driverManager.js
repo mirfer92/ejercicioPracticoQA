@@ -1,4 +1,4 @@
-import { Builder, Capabilities, until } from 'selenium-webdriver';
+import { Builder, Browser, until } from 'selenium-webdriver';
 import LoginPage from '../pageObjects/loginPage.js';
 
 let driver;
@@ -6,11 +6,9 @@ let driver;
 
 const SAUCEDEMO_URL = 'https://www.saucedemo.com/';
 
-const initializeBrowser = async function() {
-    const capabilities = Capabilities.chrome();
-    capabilities.set('chromeOptions', { 'w3c': false });
-    driver = new Builder().withCapabilities(capabilities).build();
-    driver.manage().window().maximize();
+const initializeBrowser = async function(browserName = 'chrome') {
+    driver = await new Builder().forBrowser(Browser[browserName.toUpperCase()]).build();
+    await driver.manage().window().maximize();
 };
 
 const closeBrowser = async function () {

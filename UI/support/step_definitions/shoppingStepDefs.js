@@ -11,6 +11,9 @@ Given('I navigate to saucedemo webpage', async function () {
 
 Given('I login as {string} user', async function(userKey) {
     const credentials = getCredentials(userKey);
+    if (!credentials.username && !credentials.password) {
+        throw new Error(`Credentials for "${userKey}" user were not assigned; please set them at "data/config.json" file.`);
+    }
     pageObject = await pageObject.loginWitCredtials(credentials.username, credentials.password);
     await pageObject.validateLoginSuccess();
     this.cartItems = [];
