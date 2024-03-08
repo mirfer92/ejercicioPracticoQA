@@ -3,7 +3,7 @@
 This is a Demo project based on JavaScript to test two applications:
 
 E2E Automation for: [Saucedemo sample page](https://www.saucedemo.com/)
-API Testing Automation for: [PetStore API page](https://petstore.swagger.io/)
+API Testing Automation for: [PetStore API](https://petstore.swagger.io/)
 
 **Table of Contents**
 
