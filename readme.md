@@ -2,6 +2,8 @@
 
 This is a Demo project based on JavaScript to test two applications:
 
+Sorry for the delay at compresing the project's files :(; the time was not enough to upload the .zip file in the test. Anyway, I'm uploading it at the "resources" folder.
+
 E2E Automation for: [Saucedemo sample page](https://www.saucedemo.com/)
 API Testing Automation for: [PetStore API](https://petstore.swagger.io/)
 
